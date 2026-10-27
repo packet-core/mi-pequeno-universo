@@ -1,150 +1,54 @@
+Copia todo este código y reemplaza con él el contenido de `index.html` en GitHub. Luego pulsa **Commit changes**.
+
+```html
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08091a">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08091a">
 <title>Mi pequeño universo</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 :root{--ink:#f5f0ff;--muted:#b8b3d0;--gold:#f6ce91;--pink:#e8a5c4;--night:#08091a}
-*{box-sizing:border-box} body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 52% 42%,#242044 0,#12142b 35%,var(--night) 78%);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
-body:before,body:after{content:'';position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(1px 1px at 12% 19%,#fff 50%,transparent),radial-gradient(1px 1px at 76% 11%,#fff 50%,transparent),radial-gradient(1.5px 1.5px at 89% 67%,#fff 50%,transparent),radial-gradient(1px 1px at 25% 75%,#fff 50%,transparent),radial-gradient(1px 1px at 63% 83%,#fff 50%,transparent),radial-gradient(1px 1px at 40% 31%,#fff 50%,transparent);background-size:430px 380px;opacity:.45} body:after{filter:blur(1px);transform:translate(90px,45px);opacity:.27}
-.page{position:relative;max-width:1150px;margin:auto;padding:28px 34px 48px;min-height:100vh;display:flex;flex-direction:column}.top{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#d8c8f4}.brand span{color:var(--gold)}.actions{display:flex;gap:9px}.btn{border:1px solid #ffffff30;background:#ffffff0c;color:var(--ink);padding:10px 15px;border-radius:99px;font:500 12px 'DM Sans';cursor:pointer;transition:.2s}.btn:hover{background:#ffffff1b;transform:translateY(-1px)}.btn.primary{background:#f3c98c;color:#21182a;border:0;font-weight:700}.btn svg{vertical-align:middle;margin-right:6px}.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;flex:1;min-height:590px}.copy{padding-left:14px;z-index:2}.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}.copy h1{font:600 clamp(38px,5.3vw,68px)/1.08 'Playfair Display',serif;letter-spacing:-.025em;margin:0 0 18px;max-width:540px}.copy h1 em{font-weight:500;color:#e7bbd5}.subtitle{color:var(--muted);line-height:1.75;max-width:420px;font-size:15px}.quote{font:500 19px/1.55 'Playfair Display',serif;color:#f2d8a8;margin:34px 0 8px;max-width:430px;min-height:58px;transition:opacity .35s}.quote.by{font:11px 'DM Sans';letter-spacing:.12em;text-transform:uppercase;color:#aaa4c4}.scene{height:min(66vw,590px);min-height:370px;position:relative;display:grid;place-items:center;perspective:1000px}.glow{position:absolute;width:53%;aspect-ratio:1;border-radius:50%;background:#f3aa6540;filter:blur(68px);transform:translateY(12%)}.saturn{width:min(39vw,365px);aspect-ratio:1;border-radius:50%;position:relative;z-index:2;overflow:hidden;background:radial-gradient(ellipse at 33% 29%,#ffe1b1 0,#e9bd87 14%,#bc845e 31%,#81594d 48%,#4d3e51 66%,#232741 100%);box-shadow:inset -35px -18px 52px #090b1c,inset 20px 12px 34px #fff2c655,0 0 90px #f5bd7a27}.saturn:before{content:'';position:absolute;inset:10% -10%;background:repeating-linear-gradient(0deg,transparent 0 13px,#fff4 14px 16px,transparent 17px 30px);border-radius:50%;transform:rotate(-18deg);opacity:.35}.saturn:after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#06081c9c 83%);border-radius:50%}.orbit{position:absolute;width:126%;height:39%;border:2px solid #eac997a1;border-radius:50%;transform:rotate(-18deg);z-index:3;box-shadow:0 0 16px #f7cb8c3d,inset 0 0 13px #f7cb8c2c}.orbit.back{width:132%;height:44%;border-color:#b08a9b65;z-index:1;filter:blur(.2px)}.orbit.front{clip-path:inset(48% 0 0 0)}.photo-track{position:absolute;inset:0;z-index:4;pointer-events:none}.orbit-photo{position:absolute;width:70px;height:70px;border-radius:50%;object-fit:cover;border:3px solid #ffe2b6;box-shadow:0 4px 24px #060711aa;transform:translate(-50%,-50%);background:#27243d}.orbit-photo:nth-child(2n){width:58px;height:58px;border-color:#f4bbd0}.hint{position:absolute;bottom:20px;color:#9e98ba;font-size:11px;text-align:center;letter-spacing:.08em}.controls{display:flex;gap:10px;margin-top:26px}.sound{font-size:11px;color:#9e98ba;margin-top:12px}.sound input{display:none}.footer{font-size:10px;text-align:center;color:#77718f;letter-spacing:.06em;padding-top:16px}.editPanel{display:none;position:fixed;inset:0;z-index:9;background:#070816bf;backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px}.editPanel.open{display:flex}.modal{background:#17172d;border:1px solid #ffffff1c;width:min(470px,100%);padding:27px;border-radius:20px;box-shadow:0 25px 90px #0009}.modal h2{font:600 25px 'Playfair Display';margin:0 0 7px}.modal p{color:#aaa4c4;font-size:13px;line-height:1.6;margin:0 0 19px}.field{display:block;font-size:11px;color:#d8d1e9;margin:15px 0 7px;letter-spacing:.04em}.modal textarea{width:100%;height:108px;resize:vertical;background:#0c0d20;border:1px solid #ffffff20;border-radius:10px;color:white;padding:12px;font:13px/1.6 'DM Sans'}.modal input[type=file]{width:100%;font-size:12px;color:#b6b0ca}.remember{display:flex;gap:10px;align-items:flex-start;margin-top:18px;padding:12px;border:1px solid #ffffff20;border-radius:10px;color:#eee9f7;font-size:12px;line-height:1.5}.remember input{accent-color:#f3c98c;margin-top:2px}.remember small{color:#aaa4c4}.modalActions{display:flex;justify-content:flex-end;gap:9px;margin-top:21px}.heart{color:#e9a9c4}
-@media(max-width:760px){.page{padding:22px 20px}.brand{font-size:10px}.actions .btn{padding:9px 12px}.hero{grid-template-columns:1fr;gap:0;padding-top:48px;min-height:auto}.copy{padding:0 2px;grid-row:1}.copy h1{font-size:48px}.subtitle{font-size:14px}.quote{margin-top:22px;font-size:17px}.scene{grid-row:2;height:100vw;max-height:440px;min-height:320px;margin-top:4px}.saturn{width:min(67vw,310px)}.orbit-photo{width:58px;height:58px}.orbit-photo:nth-child(2n){width:50px;height:50px}.hint{bottom:3px}.footer{padding-top:28px}}@media(max-width:390px){.actions .btn{font-size:10px;padding:8px 10px}.copy h1{font-size:41px}}
-</style></head><body><div class="page"><header class="top"><div class="brand"><span>✦</span> un universo para ti</div><div class="actions"><button class="btn" id="musicBtn" title="Elegir música">♫ Música</button><button class="btn primary" id="editBtn">Personalizar ✦</button></div></header>
-<main class="hero"><section class="copy"><div class="eyebrow">A millones de kilómetros, siempre cerca</div><h1>Mi lugar favorito<br>es <em>contigo.</em></h1><p class="subtitle">Entre tantas estrellas, el universo tuvo la suerte de cruzar nuestros caminos. Este pequeño rincón del cosmos es solo tuyo.</p><div class="quote" id="quote">“Eres mi casualidad favorita y mi destino más bonito.”</div><div class="by" id="by">— para alguien muy especial</div><div class="controls"><button class="btn primary" id="nextBtn">Otra frase <span>↗</span></button><button class="btn" id="playBtn">▷ Escuchar música</button></div><div class="sound" id="soundHint">Agrega una canción tuya para acompañar este universo.</div></section>
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 52% 42%,#242044 0,#12142b 35%,var(--night) 78%);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+body:before,body:after{content:'';position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(1px 1px at 12% 19%,#fff 50%,transparent),radial-gradient(1px 1px at 76% 11%,#fff 50%,transparent),radial-gradient(1.5px 1.5px at 89% 67%,#fff 50%,transparent),radial-gradient(1px 1px at 25% 75%,#fff 50%,transparent),radial-gradient(1px 1px at 63% 83%,#fff 50%,transparent),radial-gradient(1px 1px at 40% 31%,#fff 50%,transparent);background-size:430px 380px;opacity:.45}body:after{filter:blur(1px);transform:translate(90px,45px);opacity:.27}
+.page{position:relative;max-width:1150px;margin:auto;padding:28px 34px 48px;min-height:100vh;display:flex;flex-direction:column}.top{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#d8c8f4}.brand span{color:var(--gold)}.actions{display:flex;gap:9px}.btn{border:1px solid #ffffff30;background:#ffffff0c;color:var(--ink);padding:10px 15px;border-radius:99px;font:500 12px 'DM Sans';cursor:pointer;transition:.2s}.btn:hover{background:#ffffff1b;transform:translateY(-1px)}.btn.primary{background:#f3c98c;color:#21182a;border:0;font-weight:700}.btn.share{border-color:#e8a5c466;color:#f3c6da}.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;flex:1;min-height:590px}.copy{padding-left:14px;z-index:2}.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}.copy h1{font:600 clamp(38px,5.3vw,68px)/1.08 'Playfair Display',serif;letter-spacing:-.025em;margin:0 0 18px;max-width:540px}.copy h1 em{font-weight:500;color:#e7bbd5}.subtitle{color:var(--muted);line-height:1.75;max-width:420px;font-size:15px}.quote{font:500 19px/1.55 'Playfair Display',serif;color:#f2d8a8;margin:34px 0 8px;max-width:430px;min-height:58px;transition:opacity .35s}.by{font:11px 'DM Sans';letter-spacing:.12em;text-transform:uppercase;color:#aaa4c4}.scene{height:min(66vw,590px);min-height:370px;position:relative;display:grid;place-items:center;perspective:1000px}.glow{position:absolute;width:53%;aspect-ratio:1;border-radius:50%;background:#f3aa6540;filter:blur(68px);transform:translateY(12%);animation:glowPulse 5s ease-in-out infinite}.saturn{width:min(39vw,365px);aspect-ratio:1;border-radius:50%;position:relative;z-index:2;overflow:hidden;background:radial-gradient(ellipse at 33% 29%,#ffe1b1 0,#e9bd87 14%,#bc845e 31%,#81594d 48%,#4d3e51 66%,#232741 100%);box-shadow:inset -35px -18px 52px #090b1c,inset 20px 12px 34px #fff2c655,0 0 90px #f5bd7a27;animation:planetFloat 8s ease-in-out infinite}.saturn:before{content:'';position:absolute;inset:10% -10%;background:repeating-linear-gradient(0deg,transparent 0 13px,#fff4 14px 16px,transparent 17px 30px);border-radius:50%;transform:rotate(-18deg);opacity:.35}.saturn:after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#06081c9c 83%);border-radius:50%}.orbit{position:absolute;width:126%;height:39%;border:2px solid #eac997a1;border-radius:50%;transform:rotate(-18deg);z-index:3;box-shadow:0 0 16px #f7cb8c3d,inset 0 0 13px #f7cb8c2c;animation:ringDrift 12s ease-in-out infinite}.orbit.back{width:132%;height:44%;border-color:#b08a9b65;z-index:1;filter:blur(.2px)}.orbit.front{clip-path:inset(48% 0 0 0)}.photo-track{position:absolute;inset:0;z-index:4;pointer-events:none;animation:photoOrbit 42s linear infinite}.orbit-photo{position:absolute;width:70px;height:70px;border-radius:50%;object-fit:cover;border:3px solid #ffe2b6;box-shadow:0 4px 24px #060711aa;transform:translate(-50%,-50%);background:#27243d}.orbit-photo:nth-child(2n){width:58px;height:58px;border-color:#f4bbd0}.hint{position:absolute;bottom:20px;color:#9e98ba;font-size:11px;text-align:center;letter-spacing:.08em}.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.sound{font-size:11px;color:#9e98ba;margin-top:12px}.footer{font-size:10px;text-align:center;color:#77718f;letter-spacing:.06em;padding-top:16px}.editPanel{display:none;position:fixed;inset:0;z-index:9;background:#070816bf;backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px}.editPanel.open{display:flex}.modal{background:#17172d;border:1px solid #ffffff1c;width:min(490px,100%);max-height:92vh;overflow:auto;padding:27px;border-radius:20px;box-shadow:0 25px 90px #0009}.modal h2{font:600 25px 'Playfair Display';margin:0 0 7px}.modal p{color:#aaa4c4;font-size:13px;line-height:1.6;margin:0 0 19px}.field{display:block;font-size:11px;color:#d8d1e9;margin:15px 0 7px;letter-spacing:.04em}.modal textarea{width:100%;height:108px;resize:vertical;background:#0c0d20;border:1px solid #ffffff20;border-radius:10px;color:white;padding:12px;font:13px/1.6 'DM Sans'}.modal input[type=file]{width:100%;font-size:12px;color:#b6b0ca}.remember{display:flex;gap:10px;align-items:flex-start;margin-top:18px;padding:12px;border:1px solid #ffffff20;border-radius:10px;color:#eee9f7;font-size:12px;line-height:1.5}.remember input{accent-color:#f3c98c;margin-top:2px}.remember small{color:#aaa4c4}.modalActions{display:flex;justify-content:flex-end;gap:9px;margin-top:21px}.clip-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;padding:12px;border:1px solid #ffffff20;border-radius:10px}.clip-controls[hidden]{display:none}.clip-controls label{font-size:11px;color:#d8d1e9}.clip-controls input{display:block;width:100%;margin-top:7px;accent-color:#f3c98c}.clip-help{grid-column:1/-1;color:#aaa4c4;font-size:11px;line-height:1.5}.heart{color:#e9a9c4}
+@keyframes planetFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes ringDrift{0%,100%{transform:rotate(-18deg)}50%{transform:rotate(-16deg)}}@keyframes photoOrbit{to{transform:rotate(360deg)}}@keyframes glowPulse{0%,100%{opacity:.65;transform:translateY(12%) scale(.94)}50%{opacity:1;transform:translateY(12%) scale(1.08)}}
+@media(max-width:760px){.page{padding:22px 20px}.brand{font-size:10px}.actions .btn{padding:9px 12px}.hero{grid-template-columns:1fr;gap:0;padding-top:48px;min-height:auto}.copy{padding:0 2px;grid-row:1}.copy h1{font-size:48px}.subtitle{font-size:14px}.quote{margin-top:22px;font-size:17px}.scene{grid-row:2;height:100vw;max-height:440px;min-height:320px;margin-top:4px}.saturn{width:min(67vw,310px)}.orbit-photo{width:58px;height:58px}.orbit-photo:nth-child(2n){width:50px;height:50px}.hint{bottom:3px}.footer{padding-top:28px}}@media(max-width:390px){.actions .btn{font-size:10px;padding:8px 10px}.copy h1{font-size:41px}}@media(prefers-reduced-motion:reduce){.saturn,.orbit,.photo-track,.glow{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="page"><header class="top"><div class="brand"><span>✦</span> un universo para ti</div><div class="actions"><button class="btn" id="musicBtn" title="Elegir música">♫ Música</button><button class="btn primary" id="editBtn">Personalizar ✦</button></div></header>
+<main class="hero"><section class="copy"><div class="eyebrow">A millones de kilómetros, siempre cerca</div><h1>Mi lugar favorito<br>es <em>contigo.</em></h1><p class="subtitle">Entre tantas estrellas, el universo tuvo la suerte de cruzar nuestros caminos. Este pequeño rincón del cosmos es solo tuyo.</p><div class="quote" id="quote">“Eres mi casualidad favorita y mi destino más bonito.”</div><div class="by" id="by">— para alguien muy especial</div><div class="controls"><button class="btn primary" id="nextBtn">Otra frase ↗</button><button class="btn" id="playBtn">▷ Escuchar música</button><button class="btn share" id="shareBtn">Compartir ♥</button></div><div class="sound" id="soundHint">Agrega una canción tuya para acompañar este universo.</div></section>
 <section class="scene" aria-label="Saturno con fotografías orbitando"><div class="glow"></div><div class="orbit back"></div><div class="orbit"></div><div class="saturn"></div><div class="orbit front"></div><div class="photo-track" id="photoTrack"></div><div class="hint">LAS FOTOS DE TU PERSONA, EN ÓRBITA ✦</div></section></main><footer class="footer">hecho con <span class="heart">♥</span> y un poquito de polvo de estrellas</footer></div>
-<div class="editPanel" id="panel"><div class="modal"><h2>Hazlo suyo ✦</h2><p>Elige fotos, frases y una canción. Activa la opción de abajo para guardarlas para tu próxima visita en este navegador.</p><label class="field" for="photos">FOTOS (puedes elegir varias)</label><input id="photos" type="file" accept="image/*" multiple><label class="field" for="phrases">FRASES (una por línea)</label><textarea id="phrases" placeholder="Eres mi lugar favorito.&#10;Contigo, todo es más bonito."></textarea><label class="field" for="audio">SU CANCIÓN (opcional)</label><input id="audio" type="file" accept="audio/*"><small class="sound">La canción también se guardará si activas la opción de guardar.</small><label class="remember"><input id="remember" type="checkbox"><span><strong>Guardar fotos, frases y música para la próxima vez</strong><br><small>Se guardarán en este navegador. Si lo dejas desactivado, se reiniciarán al volver a abrir la página.</small></span></label><div class="modalActions"><button class="btn" id="closeBtn">Cerrar</button><button class="btn primary" id="saveBtn">Guardar cambios</button></div></div></div><audio id="audioPlayer" loop></audio>
+<div class="editPanel" id="panel"><div class="modal"><h2>Hazlo suyo ✦</h2><p>Elige fotos, frases y una canción. Decide qué guardar para la próxima visita y qué fragmento musical compartir.</p><label class="field" for="photos">FOTOS (puedes elegir varias)</label><input id="photos" type="file" accept="image/*" multiple><label class="field" for="phrases">FRASES (una por línea)</label><textarea id="phrases" placeholder="Eres mi lugar favorito.&#10;Contigo, todo es más bonito."></textarea><label class="field" for="audio">SU CANCIÓN (opcional)</label><input id="audio" type="file" accept="audio/*"><div class="clip-controls" id="clipControls" hidden><label>Inicio del fragmento <input id="clipStart" type="range" min="0" max="15" step="0.1" value="0"><span id="clipStartLabel">0:00</span></label><label>Fin del fragmento <input id="clipEnd" type="range" min="0.5" max="15" step="0.1" value="15"><span id="clipEndLabel">0:15</span></label><div class="clip-help" id="clipHelp">Elige el tramo que sonará y se incluirá en el archivo para compartir.</div></div><label class="remember"><input id="remember" type="checkbox"><span><strong>Guardar fotos, frases y música para la próxima vez</strong><br><small>Se guardarán en este navegador. Si queda desactivado, se reiniciarán al volver a abrir la página.</small></span></label><div class="modalActions"><button class="btn" id="closeBtn">Cerrar</button><button class="btn primary" id="saveBtn">Guardar cambios</button></div></div></div><audio id="audioPlayer"></audio>
 <script>
-const defaults = [
-  'Eres mi casualidad favorita y mi destino más bonito.',
-  'Si pudiera elegir un lugar en el universo, elegiría estar a tu lado.',
-  'Haces que hasta mis días más normales brillen como estrellas.',
-  'No importa lo lejos que esté Saturno: tú siempre eres mi centro.'
-];
-let lines = defaults, idx = 0, photos = [], remember = false;
-const quote = document.querySelector('#quote');
-const by = document.querySelector('#by');
-const track = document.querySelector('#photoTrack');
-const player = document.querySelector('#audioPlayer');
-const soundHint = document.querySelector('#soundHint');
-const playBtn = document.querySelector('#playBtn');
-const dbPromise = new Promise((resolve, reject) => {
-  const request = indexedDB.open('saturno-universo', 1);
-  request.onupgradeneeded = () => request.result.createObjectStore('media', { keyPath: 'id' });
-  request.onsuccess = () => resolve(request.result);
-  request.onerror = () => reject(request.error);
-});
-function withMediaStore(mode, action) {
-  return dbPromise.then(db => new Promise((resolve, reject) => {
-    const tx = db.transaction('media', mode);
-    const request = action(tx.objectStore('media'));
-    request.onsuccess = () => resolve(request.result);
-    request.onerror = () => reject(request.error);
-  }));
-}
-function show() {
-  quote.style.opacity = 0;
-  setTimeout(() => {
-    quote.textContent = '“' + lines[idx % lines.length] + '”';
-    quote.style.opacity = 1;
-    by.textContent = '— para alguien muy especial';
-  }, 180);
-}
-function renderPhotos() {
-  track.innerHTML = '';
-  const n = photos.length;
-  photos.forEach((src, i) => {
-    const el = document.createElement('img');
-    el.className = 'orbit-photo';
-    el.src = src;
-    const angle = (Math.PI * 2 * i / n) - Math.PI / 2;
-    el.style.left = (50 + 43 * Math.cos(angle)) + '%';
-    el.style.top = (50 + 13 * Math.sin(angle)) + '%';
-    track.append(el);
-  });
-}
-async function restoreSavedSettings() {
-  try {
-    const saved = JSON.parse(localStorage.getItem('saturnoApp') || 'null');
-    if (saved?.remember === true) {
-      remember = true;
-      if (saved.lines?.length) lines = saved.lines;
-      if (saved.photos?.length) photos = saved.photos;
-      const music = await withMediaStore('readonly', store => store.get('music'));
-      if (music?.blob) {
-        player.src = URL.createObjectURL(music.blob);
-        soundHint.textContent = 'Canción guardada: ' + music.name;
-        playBtn.textContent = '▷ Escuchar música';
-      }
-    } else {
-      localStorage.removeItem('saturnoApp');
-      await withMediaStore('readwrite', store => store.delete('music'));
-    }
-  } catch (error) {
-    // Si el navegador bloquea el almacenamiento, la app sigue funcionando durante esta visita.
-  }
-  document.querySelector('#remember').checked = remember;
-  document.querySelector('#phrases').value = lines.join('\n');
-  renderPhotos();
-  show();
-}
-restoreSavedSettings();
-setInterval(() => { idx = (idx + 1) % lines.length; show(); }, 6500);
-document.querySelector('#nextBtn').onclick = () => { idx = (idx + 1) % lines.length; show(); };
-document.querySelector('#editBtn').onclick = () => document.querySelector('#panel').classList.add('open');
-document.querySelector('#closeBtn').onclick = () => document.querySelector('#panel').classList.remove('open');
-document.querySelector('#panel').onclick = event => { if (event.target.id === 'panel') event.currentTarget.classList.remove('open'); };
-document.querySelector('#saveBtn').onclick = async () => {
-  const files = [...document.querySelector('#photos').files];
-  if (files.length) photos = await Promise.all(files.map(file => new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  })));
-  const entered = document.querySelector('#phrases').value.split('\n').map(text => text.trim()).filter(Boolean);
-  if (entered.length) lines = entered;
-  remember = document.querySelector('#remember').checked;
-  if (remember) {
-    try {
-      localStorage.setItem('saturnoApp', JSON.stringify({ lines, photos, remember: true }));
-      const selectedMusic = document.querySelector('#audio').files[0];
-      if (selectedMusic) await withMediaStore('readwrite', store => store.put({ id: 'music', blob: selectedMusic, name: selectedMusic.name }));
-    } catch (error) {
-      alert('No se pudieron guardar todos los cambios en este navegador. Prueba con menos fotos o una canción más pequeña.');
-    }
-  } else {
-    localStorage.removeItem('saturnoApp');
-    try { await withMediaStore('readwrite', store => store.delete('music')); } catch (error) {}
-  }
-  idx = 0;
-  show();
-  renderPhotos();
-  document.querySelector('#panel').classList.remove('open');
-};
-const fileInput = document.querySelector('#audio');
-document.querySelector('#musicBtn').onclick = () => {
-  document.querySelector('#panel').classList.add('open');
-  fileInput.scrollIntoView({ block: 'nearest' });
-};
-fileInput.onchange = () => {
-  if (fileInput.files[0]) {
-    player.src = URL.createObjectURL(fileInput.files[0]);
-    soundHint.textContent = 'Canción lista: ' + fileInput.files[0].name;
-    playBtn.textContent = '▷ Escuchar música';
-  }
-};
-playBtn.onclick = async () => {
-  if (!player.src) {
-    document.querySelector('#panel').classList.add('open');
-    fileInput.click();
-    return;
-  }
-  if (player.paused) {
-    try { await player.play(); playBtn.textContent = 'Ⅱ Pausar música'; } catch (error) {}
-  } else {
-    player.pause();
-    playBtn.textContent = '▷ Escuchar música';
-  }
-};
-</script></body></html>
+const defaults=['Eres mi casualidad favorita y mi destino más bonito.','Si pudiera elegir un lugar en el universo, elegiría estar a tu lado.','Haces que hasta mis días más normales brillen como estrellas.','No importa lo lejos que esté Saturno: tú siempre eres mi centro.'];
+let lines=defaults,idx=0,photos=[],remember=false,currentMusicBlob=null,currentMusicName='',duration=0,savedClipStart=0,savedClipEnd=0;
+const $=selector=>document.querySelector(selector),quote=$('#quote'),by=$('#by'),track=$('#photoTrack'),player=$('#audioPlayer'),soundHint=$('#soundHint'),playBtn=$('#playBtn'),clipStart=$('#clipStart'),clipEnd=$('#clipEnd'),clipControls=$('#clipControls');
+const dbPromise=new Promise((resolve,reject)=>{const req=indexedDB.open('saturno-universo',1);req.onupgradeneeded=()=>req.result.createObjectStore('media',{keyPath:'id'});req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)});
+function mediaRequest(mode,operation){return dbPromise.then(db=>new Promise((resolve,reject)=>{const tx=db.transaction('media',mode),req=operation(tx.objectStore('media'));req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)}))}
+function show(){quote.style.opacity=0;setTimeout(()=>{quote.textContent='“'+lines[idx%lines.length]+'”';quote.style.opacity=1;by.textContent='— para alguien muy especial'},180)}
+function renderPhotos(){track.innerHTML='';photos.forEach((src,i)=>{const image=document.createElement('img');image.className='orbit-photo';image.src=src;const angle=(Math.PI*2*i/photos.length)-Math.PI/2;image.style.left=(50+43*Math.cos(angle))+'%';image.style.top=(50+13*Math.sin(angle))+'%';track.append(image)})}
+function timeLabel(seconds){const value=Math.max(0,Math.floor(Number(seconds)||0));return Math.floor(value/60)+':'+String(value%60).padStart(2,'0')}
+function clipRange(){const start=Math.max(0,Number(clipStart.value)||0),end=Math.min(duration||Number(clipEnd.max)||15,Number(clipEnd.value)||duration||15);return{start:Math.min(start,Math.max(0,end-.2)),end:Math.max(end,start+.2)}}
+function updateClipLabels(){const range=clipRange();$('#clipStartLabel').textContent=timeLabel(range.start);$('#clipEndLabel').textContent=timeLabel(range.end)}
+function setClipControls(start=0,end=null){duration=Number.isFinite(player.duration)?player.duration:0;const max=Math.max(.5,duration);clipStart.max=max;clipEnd.max=max;clipEnd.min=.5;const chosenEnd=end&&end<=max?end:Math.min(15,max);const chosenStart=Math.min(start,Math.max(0,chosenEnd-.2));clipStart.value=chosenStart;clipEnd.value=Math.max(chosenStart+.2,chosenEnd);clipControls.hidden=false;updateClipLabels()}
+function onSongReady(start=0,end=null){setClipControls(start,end);const label=currentMusicName||'Canción lista';soundHint.textContent=label+' · selecciona el fragmento y pulsa Guardar cambios';}
+async function restoreSaved(){try{const saved=JSON.parse(localStorage.getItem('saturnoApp')||'null');if(saved&&saved.remember===true){remember=true;lines=saved.lines?.length?saved.lines:defaults;photos=saved.photos||[];savedClipStart=saved.clipStart||0;savedClipEnd=saved.clipEnd||0;const music=await mediaRequest('readonly',store=>store.get('music'));if(music?.blob){currentMusicBlob=music.blob;currentMusicName=music.name||'Canción guardada';player.src=URL.createObjectURL(music.blob);player.onloadedmetadata=()=>onSongReady(music.clipStart||savedClipStart,music.clipEnd||savedClipEnd)}}else{localStorage.removeItem('saturnoApp');await mediaRequest('readwrite',store=>store.delete('music'))}}catch(error){}$('#remember').checked=remember;$('#phrases').value=lines.join('\n');renderPhotos();show()}
+restoreSaved();setInterval(()=>{idx=(idx+1)%lines.length;show()},6500);
+$('#nextBtn').onclick=()=>{idx=(idx+1)%lines.length;show()};$('#editBtn').onclick=()=>$('#panel').classList.add('open');$('#closeBtn').onclick=()=>$('#panel').classList.remove('open');$('#panel').onclick=event=>{if(event.target.id==='panel')event.currentTarget.classList.remove('open')};$('#musicBtn').onclick=()=>{$('#panel').classList.add('open');$('#audio').click()};
+$('#clipStart').oninput=updateClipLabels;$('#clipEnd').oninput=updateClipLabels;
+player.ontimeupdate=()=>{if(!player.paused&&duration){const range=clipRange();if(player.currentTime>=range.end)player.currentTime=range.start}};
+$('#audio').onchange=event=>{const file=event.target.files[0];if(!file)return;currentMusicBlob=file;currentMusicName=file.name;player.src=URL.createObjectURL(file);player.onloadedmetadata=()=>setClipControls(0,Math.min(15,player.duration));soundHint.textContent='Cargando canción…'};
+$('#playBtn').onclick=async()=>{if(!player.src){$('#panel').classList.add('open');$('#audio').click();return}if(player.paused){const range=clipRange();if(player.currentTime<range.start||player.currentTime>=range.end)player.currentTime=range.start;try{await player.play();playBtn.textContent='Ⅱ Pausar música'}catch(error){}}else{player.pause();playBtn.textContent='▷ Escuchar música'}};
+$('#saveBtn').onclick=async()=>{const files=[...$('#photos').files];if(files.length)photos=await Promise.all(files.map(file=>new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(file)})));const entered=$('#phrases').value.split('\n').map(text=>text.trim()).filter(Boolean);if(entered.length)lines=entered;remember=$('#remember').checked;const range=clipControls.hidden?{start:0,end:0}:clipRange();if(remember){try{localStorage.setItem('saturnoApp',JSON.stringify({lines,photos,remember:true,clipStart:range.start,clipEnd:range.end}));if(currentMusicBlob)await mediaRequest('readwrite',store=>store.put({id:'music',blob:currentMusicBlob,name:currentMusicName,clipStart:range.start,clipEnd:range.end}))}catch(error){alert('No se pudieron guardar todos los cambios. Prueba con menos fotos o una canción más pequeña.')}}else{localStorage.removeItem('saturnoApp');try{await mediaRequest('readwrite',store=>store.delete('music'))}catch(error){}}idx=0;show();renderPhotos();$('#panel').classList.remove('open')};
+function blobDataUrl(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(blob)})}
+async function makeMusicExcerpt(){if(!currentMusicBlob)return null;const AudioContextClass=window.AudioContext||window.webkitAudioContext;if(!AudioContextClass)return currentMusicBlob;const context=new AudioContextClass();try{const decoded=await context.decodeAudioData(await currentMusicBlob.arrayBuffer()),range=clipRange(),from=Math.min(range.start,Math.max(0,decoded.duration-.1)),to=Math.min(decoded.duration,Math.max(from+.1,range.end)),rate=22050,count=Math.max(1,Math.floor((to-from)*rate)),dataBytes=count*2,buffer=new ArrayBuffer(44+dataBytes),view=new DataView(buffer);const write=(offset,text)=>{for(let i=0;i<text.length;i++)view.setUint8(offset+i,text.charCodeAt(i))};write(0,'RIFF');view.setUint32(4,36+dataBytes,true);write(8,'WAVE');write(12,'fmt ');view.setUint32(16,16,true);view.setUint16(20,1,true);view.setUint16(22,1,true);view.setUint32(24,rate,true);view.setUint32(28,rate*2,true);view.setUint16(32,2,true);view.setUint16(34,16,true);write(36,'data');view.setUint32(40,dataBytes,true);const channels=decoded.numberOfChannels;for(let i=0;i<count;i++){const sourceIndex=Math.min(decoded.length-1,Math.floor((from+i/rate)*decoded.sampleRate));let sample=0;for(let channel=0;channel<channels;channel++)sample+=decoded.getChannelData(channel)[sourceIndex];sample/=channels;sample=Math.max(-1,Math.min(1,sample));view.setInt16(44+i*2,sample<0?sample*32768:sample*32767,true)}return new Blob([buffer],{type:'audio/wav'})}catch(error){return currentMusicBlob}finally{context.close()}}
+function sharePage(data){const payload=JSON.stringify(data).replace(/</g,'\\u003c');const styles=document.querySelector('style').textContent;return `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Un universo para ti</title><style>${styles}.share-note{color:#aaa4c4;font-size:12px;margin-top:14px}.share-play{margin-top:14px}</style></head><body><div class="page"><header class="top"><div class="brand"><span>✦</span> un universo para ti</div></header><main class="hero"><section class="copy"><div class="eyebrow">Una dedicatoria especial</div><h1>Mi lugar favorito<br>es <em>contigo.</em></h1><p class="subtitle">Alguien preparó este pequeño universo especialmente para ti.</p><div class="quote" id="giftQuote"></div><div class="by">— con mucho cariño</div><div class="controls"><button class="btn primary" id="giftNext">Otra frase ↗</button><button class="btn" id="giftPlay" hidden>▷ Escuchar música</button></div><div class="share-note" id="giftNote">Las fotos y frases están orbitando para ti ✦</div></section><section class="scene" aria-label="Saturno con fotografías orbitando"><div class="glow"></div><div class="orbit back"></div><div class="orbit"></div><div class="saturn"></div><div class="orbit front"></div><div class="photo-track" id="giftPhotos"></div><div class="hint">UN PEQUEÑO UNIVERSO PARA TI ✦</div></section></main><footer class="footer">hecho con ♥ y polvo de estrellas</footer></div><audio id="giftAudio"></audio><script>const gift=${payload};let n=0;const q=document.querySelector('#giftQuote'),g=document.querySelector('#giftPhotos'),a=document.querySelector('#giftAudio'),p=document.querySelector('#giftPlay');function showGift(){q.textContent='“'+gift.lines[n%gift.lines.length]+'”'}gift.photos.forEach((src,i)=>{const im=document.createElement('img');im.className='orbit-photo';im.src=src;const angle=2*Math.PI*i/gift.photos.length-Math.PI/2;im.style.left=(50+43*Math.cos(angle))+'%';im.style.top=(50+13*Math.sin(angle))+'%';g.append(im)});showGift();setInterval(()=>{n=(n+1)%gift.lines.length;showGift()},6500);document.querySelector('#giftNext').onclick=()=>{n=(n+1)%gift.lines.length;showGift()};if(gift.music){a.src=gift.music;p.hidden=false;p.onclick=async()=>{if(a.paused){try{await a.play();p.textContent='Ⅱ Pausar música'}catch(e){}}else{a.pause();p.textContent='▷ Escuchar música'}};a.onended=()=>{p.textContent='▷ Escuchar música'}}${'</scr'+'ipt>'}</body></html>`}
+$('#shareBtn').onclick=async()=>{try{const excerpt=await makeMusicExcerpt(),music=excerpt?await blobDataUrl(excerpt):null,data={lines,photos,music};const file=new File([sharePage(data)],'Mi-pequeno-universo.html',{type:'text/html'});if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],title:'Un pequeño universo para ti',text:'Te preparé esta dedicatoria especial ✦'});return}const link=document.createElement('a');link.href=URL.createObjectURL(file);link.download='Mi-pequeno-universo.html';link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1500);alert('Listo. Se descargó Mi-pequeno-universo.html; envíaselo a esa persona por WhatsApp, correo u otra aplicación.')}catch(error){if(error.name!=='AbortError')alert('No se pudo crear el archivo para compartir. Intenta usar una canción más corta o más pequeña.')}};
+</script>
+</body>
+</html>
+```
